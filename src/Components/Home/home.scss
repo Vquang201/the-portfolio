@@ -1,0 +1,71 @@
+@use '../../scss/' as *;
+
+.home {
+    padding-top: 32px;
+    .avatar-wrap {
+        height : 120px;
+        width: 15%;
+        border-radius: 50%;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+    .avatar {
+        width: 100%;
+        object-fit: cover;
+        opacity: 0.8;
+    }
+    .heading {
+        margin-top: 12px;
+        
+        margin-bottom: 16px;
+        white-space: nowrap;
+        animation: text-effect 5s linear infinite;
+        @keyframes text-effect {
+            0% {
+                color: rgb(95, 59, 119);
+            }
+            20%{
+                color: rgb(106, 40, 49);
+            }
+            50% {
+                color: rgb(42, 156, 112);
+            }
+            70%{
+                color: rgb(92, 102, 45);
+            }
+            100% {
+                color : black
+               
+            }
+        }
+    }
+    
+
+
+    .question {
+        margin-bottom: 46px;
+        font-size: 14px;
+    }
+
+    @media (max-width : $mobile-width){
+        padding: 6px;
+        .avatar-wrap {
+            height : 80px;
+            width: 20%;
+            border-radius: 50%;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        .avatar {
+            width: 100%;
+            object-fit: contain;
+            opacity: 0.8;
+        }
+        .heading {
+            font-size: 14px;
+        }
+        .question {
+            font-size: 12px;
+        }
+    }
+}

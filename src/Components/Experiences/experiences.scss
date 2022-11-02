@@ -1,0 +1,44 @@
+@use '../../scss/' as * ;
+
+.experiences-wrap {
+    font-size: 14px;
+    .content {
+        border: 2px solid black;
+        width: $tab-width;
+        margin: 0 auto;
+        border-radius: 5px;
+        margin-bottom: 18px;
+        position: relative;
+        p {
+            padding: 6px;
+            // chỉ lấy 1 phần đầu tiên
+            &:nth-child(2n + 1) {
+                color: white; 
+                display: inline-block;
+                background-color: black ;
+                border-radius: 15px;
+                margin-top: 12px;
+            }
+        }       
+
+        // chỉ làm 2 phần tử đầu tiên
+        &:nth-child(-n + 2) , &:nth-child(even) {
+            &::after {
+                content: '';
+                position: absolute;
+                background-color: rgb(40, 39, 39);
+                border-radius: 1px;
+                width: 10px;
+                height: 20px;
+                right: 50%;
+            }
+        }
+    }
+
+    @media (max-width : $mobile-width) {
+        font-size: 12px;
+        .content {
+            width: $mobile-tab-width;
+        }
+    }
+}

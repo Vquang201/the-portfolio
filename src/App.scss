@@ -1,0 +1,28 @@
+@use "./scss/" as *;
+
+*{
+  padding: 0;
+  margin: 0;
+}
+body {
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-size:1.25rem;
+  letter-spacing: 0.1rem;
+  font-family: 'Inter', sans-serif;
+}
+
+.App {
+  text-align: center;
+  background: $background;
+  background: $background-linear;
+  height: 100vh;
+  width: 100%;
+}
+
+.grid {
+  max-width: 800px;
+  margin: 0 auto;
+}
+

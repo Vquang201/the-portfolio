@@ -1,0 +1,54 @@
+@use '../../scss/' as * ;
+
+.bio-wrap {
+    padding-top: 12px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    font-size: 16px;
+    text-align: justify;
+    .info-list {
+        li {
+            list-style-type: none;
+            display: block;
+            margin: 8px 0;
+        }
+    }
+    .flex {
+        display: flex;
+        align-items: center;
+    }
+
+    .about {
+        max-width: $content-width;
+        border-left: 5px solid black;
+        padding-left: 12px;
+        margin: 8px 0;
+    }
+    
+    .heading-icon {
+        margin-right: 12px;
+        border-radius: 50%;
+        color: white;
+        padding: 12px;
+        background-color: rgb(22,28,42);
+    }
+    
+    .language-icon {
+        padding: 0 4px;
+    }
+
+    @media (max-width : $mobile-width) {
+        font-size: 12px;
+        padding: 0;
+        .heading-icon {
+            padding: 8px;
+        }
+        .about {
+            max-width: $mobile-content-width;
+            border : none ;
+            padding-left: 12px;
+            margin: 8px 0;
+        }
+    }
+}

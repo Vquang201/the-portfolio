@@ -1,0 +1,25 @@
+@use '../../scss/' as *;
+
+.tabs-contain {
+    font-size: 20px;
+    margin-bottom: 12px;
+    
+    .active {
+        color: rgb(250,182,59) !important;
+    }
+
+    .tab-name {
+        padding: 12px 32px;
+        text-decoration: none;
+        background-color: black;
+        color: white;     
+    }
+
+    @media (max-width : $mobile-width) {
+        .tab-name {
+            font-size: 12px;
+            padding: 12px 14px;
+        }
+    }
+
+}
